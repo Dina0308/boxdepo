@@ -1,0 +1,70 @@
+.about {
+    padding: 68px 0 60px;
+    &__wrapper {
+        display: grid;
+        gap: 104px;
+        grid-template-columns: 312px 1fr;
+    }
+    .title {
+        text-align: left;
+    }
+    .section-label {
+        margin: 0 0 12px;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: rgba(0, 0, 0, 0.7);
+        margin: 0 0 12px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__wins {
+        margin: 64px 0 0;
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+        gap: 32px;
+        counter-reset: aboutwins 0;
+        li {
+            border-radius: 8px;
+            box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.12);
+            background: #fff;
+            padding: 40px 40px 36px;
+            display: flex;
+            flex-direction: column;
+            counter-increment: aboutwins 1;
+            
+        }
+        &__num {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 120%;
+            color: #f3cc00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            border: 2px solid $main-color;
+            margin-bottom: 16px;
+            &::before {
+                content: counter(aboutwins);
+            }
+        }
+        &__head {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 120%;
+            margin: 0 0 12px;
+            flex-grow: 1;
+        }
+        .about__text {
+            margin: 0;
+        }
+    }
+}

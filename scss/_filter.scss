@@ -1,0 +1,53 @@
+.filter {
+    padding: 60px 0;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #d2d2d2;
+        border-radius: 8px;
+        padding-right: 48px;
+    }
+    &__img {
+        max-width: 772px;
+        img {
+            display: block;
+            max-width: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__form {
+        border-radius: 8px;
+        background: #1f1f1f;
+        padding: 40px;
+        flex-grow: 1;
+        max-width: 384px;
+        &__wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        select {
+            appearance: none;
+            padding-right: 37px;
+            background: url(../img/arrow-select.svg) no-repeat right 25px center;
+            background-color: #fff;
+            border-radius: 4px;
+            border: none;
+            height: 56px;
+            padding: 8px 37px 8px 20px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: rgba(0, 0, 0, 0.4);
+        }
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 100%;
+        color: #fff;
+        margin: 0 0 24px 0;
+    }
+}

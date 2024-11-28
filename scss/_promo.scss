@@ -1,0 +1,103 @@
+.promo {
+    transform: translateY(-105px);
+    padding-bottom: 172px;
+    background-image: image-set(
+        url("../img/promo-bg.webp") type("image/webp") 1x,
+        url("../img/promo-bg.webp") type("image/webp") 2x,
+        url("../img/promo-bg.jpg") type("image/jpg") 1x,
+        url("../img/promo-bg-2x.jpg") type("image/jpg") 2x
+    );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    // height: calc(100vh - 68px);
+    position: relative;
+    &__content {
+        max-width: 566px;
+        padding-top: 173px;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 107%;
+        color: #fff;
+        margin: 0 0 20px;
+    }
+    &__subtitle {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: #fff;
+        margin: 0 0 32px;
+    }
+    
+    &__list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 32px;
+        position: absolute;
+        bottom: -68px;
+        left: 50%;
+        width: 90%;
+        transform: translateX(-50%);
+        max-width: 1216px;
+        gap: 32px;
+        &__item {
+            border-radius: 8px;
+            width: 32%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 44px 32px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            position: relative;
+            &:nth-child(1) {
+                background-image: url(../img/promo-img1.jpg);
+            }
+            &:nth-child(2) {
+                background-image: url(../img/promo-img2.jpg);
+            }
+            &:nth-child(3) {
+                background-image: url(../img/promo-img3.jpg);
+            }
+            img {
+                width: 48px;
+                height: 48px;
+                object-fit: contain;
+                position: relative;
+            }
+            &::before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: block;
+                background-color: #1f1f1f;
+                z-index: 0;
+                transition: background-color .3s;
+                border-radius: 8px;
+                
+            }
+            &:hover {
+                &::before {
+                    background-color: rgba(243, 204, 0, .4);
+                }
+            }
+        }
+        &__text {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 120%;
+            color: #fff;
+            margin: 0;
+            position: relative;
+        }
+    }
+}

@@ -1,0 +1,85 @@
+footer {
+    background: #1f1f1f;
+    padding: 64px 0 20px;
+    hr {
+        height: 1px;
+        background-color: #575757;
+        border: none;
+        margin: 0;
+    }
+}
+.footer {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 64px;
+        padding-right: 84px;
+    }
+    &__menu {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        
+        li {
+            margin-bottom: 8px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            a {
+                text-decoration: none;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: #fff;
+                display: block;
+                height: 100%;
+                transition: opacity .3s;
+                &:hover {
+                    opacity: .75;
+                }
+            }
+        }
+    }
+    &__item {
+        .soc {
+            margin-top: 8px;
+            gap: 12px;
+            &__link {
+                width: 24px;
+                height: 24px;
+                border-radius: 100%;
+                background-color: transparent;
+                &_fb {
+                    background-image: url(../img/contacts-fb.svg);
+                }
+                &_ig {
+                    background-image: url(../img/contacts-ig.svg);
+                    border-radius: 4px;
+                }
+            }
+        }
+        .contacts__link {
+            margin-bottom: 8px;
+        }
+        .contacts__link_email {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+    &__bottom {
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        &__text {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 171%;
+            color: rgba(255, 255, 255, 0.6);
+            display: block;
+            margin: 0;
+            text-decoration: none;
+        }
+    }
+}
